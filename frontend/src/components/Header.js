@@ -6,13 +6,14 @@ import {useDispatch,useSelector} from 'react-redux'
 import { LinkContainer } from "react-router-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {logout} from '../actions/userActions.js'
-const Header = () => {
+const Header = (history) => {
 	const dispatch=useDispatch()
 	const userLogin = useSelector((state)=> state.userLogin)
 	const {userInfo}= userLogin
 
 	const logoutHandler=()=>{
 		dispatch(logout())
+		history.push('/login');
 	}
 	return (
 		<header>

@@ -28,7 +28,7 @@ const App = ()=> {
       <Route path="/shipping" component={ShippingScreen} />
       <Route path="/payment" component={PaymentScreen} />
       <Route path="/register" component={RegisterScreen} />
-      <Route path="/login" component={LoginScreen} />
+      <Route path="/login" component={LoginScreen} exact/>
       <Route path="/profile" component={ProfileScreen} />
       <Route path="/product/:id" component={ProductScreen} />  
       <Route path="/cart" component={CartScreen} /> 
