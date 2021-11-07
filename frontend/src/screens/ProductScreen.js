@@ -42,7 +42,7 @@ const ProductScreen = ({ history, match }) => {
       dispatch(listProductDetails(match.params.id))
       dispatch({ type: PRODUCT_CREATE_REVIEW_RESET })
     }
-  }, [dispatch, match, successProductReview])
+  }, [dispatch, match, successProductReview,product])
 
   const addToCartHandler = () => { 
     dispatch(addToCart(product._id, qty))

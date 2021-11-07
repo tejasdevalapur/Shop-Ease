@@ -37,7 +37,7 @@ const ProductEditScreen = ({history,match}) => {
         }
         else{
 
-            if(!product || product._id!==product){
+            if(!product || product._id!==productId){
                 dispatch(listProductDetails(productId))
             }else{
                 setName(product.name)
